@@ -20,4 +20,14 @@
         border-bottom: 3px solid;
         border-color: lightgray;
     }
+    .mat-list-name {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .mat-list-desc {
+        color: #6a7282;
+        font-size: 18px;
+        margin-top: -10px;
+        margin-left: 19px;
+    }
 }
