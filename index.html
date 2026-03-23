@@ -189,11 +189,40 @@
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
-        <div class="flex-row flex items-center gap-2.5 md:mr-[407px] ">
+        <div class="flex-row flex items-center gap-2.5 md:mr-[470px] ">
             <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
                 <p class="text-white font-bold md:text-2xl text-xl">4</p>
             </div>
             <p class="text-blue-600 font-bold md:text-2xl text-xl">Power on and first boot!</p>
+        </div>
+        <div class="bg-green-100 md:w-200 w-175 h-auto border-green-300 border-2 rounded-[15px] mt-5 p-5">
+            <p class="font-bold text-green-700 text-xl">Connect the power supply</p>
+            <p class="st-g">This is the final step! Once you connect the power, your Raspberry Pi will start automatically.</p>
+            <p class="st-g">1. Make sure your monitor is turned on and set to the correct input</p>
+            <p class="st-g">2. Connect the USB-C power supply to the power port on the Raspberry Pi 5</p>
+            <p class="st-g">3. Plug the power supply into a wall outlet</p>
+            <p class="st-g">4. The Raspberry Pi will immediately begin to boot (no power button to press!)</p>
+            <hr class="hr-g">
+            <p class="font-bold text-green-700 text-xl mt-5">What to expect?</p>
+            <p class="st-g">During the first boot, you'll see:</p>
+            <ul class="st-g list-disc list-inside ml-4">     
+                <li>A red LED light on the board (indicating power)</li>
+                <li>A green LED that blinks (indicating disk activity)</li>
+                <li>Boot messages scrolling on your screen (colored Raspberry Pi logo may appear)</li>
+                <li>The boot process takes 30-60 seconds on first startup</li>
+            </ul>
+            <hr class="hr-g">
+            <p class="font-bold text-green-700 text-xl mt-5">Initial Setup Wizard</p>
+            <p class="st-g">If you didn't configure settings in the Imager, you'll be greeted with a setup wizard that will guide you through:</p>
+            <ul class="st-g list-disc list-inside ml-4">
+                <li>Setting your country, language and timezone</li>
+                <li>Creating a username and password</li>
+                <li>Connecting to WiFi</li>
+                <li>Updating software</li>
+            </ul>
+            <p class="st-g">In many scenarios, some settings are left out during the Imager setup, so it is best to follow all on-screen instructions given to ensure that no settings are left out and everything operates smoothly. After this you will be ready to use your Raspberry Pi 5.
+                If you face any issues, feel free to open the panel in the corner!
+            </p>
         </div>
     </div>
 </body>

@@ -32,10 +32,16 @@
     .st{
         @apply font-normal text-gray-500 mt-2;
     }
+    .st-g{
+        @apply font-normal text-green-600 mt-2;
+    }
     .st-ul {
         @apply font-normal text-gray-500;
     }
     .hr-d{
         @apply mt-5 border-solid border-gray-300 border;
+    }
+    .hr-g{
+        @apply mt-5 border-solid border-green-300 border;
     }
 }
