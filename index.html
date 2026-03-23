@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
-        <div class="flex-row flex items-center gap-2.5 md:mr-[525px]">
+        <div class="flex-row flex items-center gap-2.5 md:mr-131.25">
             <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
                 <p class="text-white font-bold md:text-2xl text-xl">1</p>
             </div>
@@ -129,7 +129,7 @@
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
-        <div class="flex-row flex items-center gap-2.5 md:mr-[185px]">
+        <div class="flex-row flex items-center gap-2.5 md:mr-46.25">
             <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
                 <p class="text-white font-bold md:text-2xl text-xl">2</p>
             </div>
@@ -137,11 +137,11 @@
         </div>
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <p class="font-bold">Step 2.1: Download the Raspberry Pi Imager</p>
-            <p class="font-normal text-gray-500">
-                1. Visit the Raspberry Pi website: <span class="font-normal font-mono w-auto pl-1.5 pr-1.5 bg-gray-50 rounded-[2px]">https://www.raspberrypi.com/software/</span> <br>
+            <p class="st">
+                1. Visit the Raspberry Pi website: <span class="font-normal font-mono w-auto pl-1.5 pr-1.5 bg-gray-50 rounded-xs">https://www.raspberrypi.com/software/</span> <br>
             </p>
-            <p class="font-normal text-gray-500 mt-2">2. Download the Raspberry Pi Imager for your operating system (Windows, macOS, or Linux)</p>
-            <p class="font-normal text-gray-500 mt-2">3. Install the Raspberry Pi Imager to your computer</p>
+            <p class="st mt-2">2. Download the Raspberry Pi Imager for your operating system (Windows, macOS, or Linux)</p>
+            <p class="st mt-2">3. Install the Raspberry Pi Imager to your computer</p>
         </div>
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <p class="font-bold">Step 2.2: Preparing the MicroSD card</p>
@@ -166,7 +166,7 @@
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
-        <div class="flex-row flex items-center gap-2.5 md:mr-[407px] ">
+        <div class="flex-row flex items-center gap-2.5 md:mr-101.75 ">
             <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
                 <p class="text-white font-bold md:text-2xl text-xl">3</p>
             </div>
@@ -190,7 +190,7 @@
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
-        <div class="flex-row flex items-center gap-2.5 md:mr-[470px] ">
+        <div class="flex-row flex items-center gap-2.5 md:mr-117.5 ">
             <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
                 <p class="text-white font-bold md:text-2xl text-xl">4</p>
             </div>
@@ -254,41 +254,39 @@
         </div>
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <div class="flex flex-row gap-2.5 items-center">
-                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">1</div>
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-0.5 text-center flex flex-col justify-center text-blue-500 font-bold">1</div>
                 <p class="font-bold text-blue-600 text-xl">Connect the Camera onto the Raspberry Pi</p>
             </div>
             <div class="flex flex-col gap-0.5 ml-5">
-                <p class="st-bu">1. Power off your Raspberry Pi 5 for safety.</p>
-                <p class="st-bu">2. Locate the camera connector labeled CAMERA on the board.</p>
-                <p class="st-bu">3. Gently pull up the plastic clip on the camera connector</p>
-                <p class="st-bu">4. Insert the ribbon cable from the IMX500 camera with the blue side facing the Ethernet port.</p>
-                <p class="st-bu">5. Push the plastic clip back down to secure the cable.</p>
-                <p class="st-bu">6. Power on your Raspberry Pi.</p>
+                <p class="st">1. Power off your Raspberry Pi 5 for safety.</p>
+                <p class="st">2. Locate the camera connector labeled CAMERA on the board.</p>
+                <p class="st">3. Gently pull up the plastic clip on the camera connector</p>
+                <p class="st">4. Insert the ribbon cable from the IMX500 (aka the Pi Camera) camera with the blue side facing the Ethernet port.</p>
+                <p class="st">5. Push the plastic clip back down to secure the cable.</p>
+                <p class="st">6. Power on your Raspberry Pi.</p>
             </div>
         </div>  
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <div class="flex flex-row gap-2.5 items-center">
-                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">2</div>
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-0.5 text-center flex flex-col justify-center text-blue-500 font-bold">2</div>
                 <p class="font-bold text-blue-600 text-xl">Update your system</p>
             </div>
             <div class="flex flex-col gap-0.5 ml-5">
-                <p class="st-bu">Open the Terminal (on your Raspberry Pi) and update your system packages:</p>
-                <div class="mt-2 mb-2 font-code bg-black w-auto h-auto p-5 rounded-[15px] tracking-[0.1em] ">
+                <p class="st">Open the Terminal (on your Raspberry Pi) and update your system packages:</p>
+                <div class="mt-2 mb-2 font-code bg-black w-auto h-auto p-5 rounded-[15px] tracking-widest ">
                     <p>sudo apt upgrade</p>
                     <p>sudo apt full-upgrade</p>
                 </div>
-                <p class="st-bu">Running both of these commands in succession updates all packages installed on the system and is a good way to ensure every library is up to date </p>
+                <p class="st">Running both of these commands in succession updates all packages installed on the system and is a good way to ensure every library is up to date </p>
             </div>
         </div> 
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <div class="flex flex-row gap-2.5 items-center">
-                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">3</div>
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-0.5 text-center flex flex-col justify-center text-blue-500 font-bold">3</div>
                 <p class="font-bold text-blue-600 text-xl">Create a Project Folder and Virtual Environment</p>
             </div>
             <div class="flex flex-col gap-0.5 ml-5">
-                <p class="st-bu">This can be done in 2 ways.</p>
-                <p class="st-bu">Either you can make it on the desktop screen, or via commands. In the end some terminal based commands will be used. </p>
-                <p class="st-bu"><span class="font-extrabold">Method 1: Via Commands</span></p>
+                <p class="st">Create a folder on Desktop and set up a Python Virtual Environment</p>
                 <div class="font-code">
                     <p class="mt-5"># Navigate to Desktop and make a folder called 'arch-vision' or 'archaeo-vision'</p>
                     <p class="mt-5">cd ~/Desktop</p>
@@ -300,9 +298,29 @@
                     <p class="mt-5"># Activate the virtual environment</p>
                     <p class="mt-5 mb-5">source archaeo-vision/bin/activate</p>
                 </div>
+                <div class="bg-blue-200 border-2 border-blue-300 w-auto h-auto mt-5 p-5 rounded-[15px]">
+                    <p class="text-blue-600 font-extrabold">What to expect:</p>
+                    <p class="st">You should see the name of the venv in the brackets of your terminal prompt, like <span class=" ml-1 font-jet bg-blue-50 w-auto h-auto p-0.5 rounded-[5px] ">(archeo-vision)</span></p>
+                </div>
             </div>
-            
-        </div>   
+        </div>  
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <div class="flex flex-row gap-2.5 items-center">
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-0.5 text-center flex flex-col justify-center text-blue-500 font-bold">4</div>
+                <p class="font-bold text-blue-600 text-xl">Install Moondream and dependencies</p>
+            </div>
+            <div class="flex flex-col gap-0.5 ml-5">
+                <p class="st">Install the Moondream package and required dependencies (make sure your virtual environment is activated):</p>
+                <div class="font-code wrap-normal p-5">
+                    <p># Install Moondream)</p>
+                    <p class="mt-5">pip3 install moondream</p>
+                    <p class="mt-5"># Install numpy version</p>
+                    <p class="mt-5">pip3 install numpy</p>
+                    <p class="mt-5"># Download the int8 quantized model</p>
+                    <p class="mt-5 inline-block max-w-full wrap-anywhere [word-break: break-word]">wget https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream-2b-int8.mf</pre>
+                </div>
+            </div>
+        </div>  
     </div>
 </body>
 </html>

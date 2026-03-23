@@ -30,13 +30,13 @@
         margin-top: -10px;
     }
     .st{
-        @apply font-normal text-gray-500 mt-2;
+        @apply font-normal text-black mt-4;
     }
     .st-g{
         @apply font-normal text-green-600 mt-2;
     }
     .st-ul {
-        @apply font-normal text-gray-500;
+        @apply font-normal text-black;
     }
     .hr-d{
         @apply mt-5 border-solid border-gray-300 border;
@@ -48,10 +48,13 @@
        background: linear-gradient(90deg, #40C9FF, #E81CFF);
     } /*credits to coolors.co for gradient yahooo*/
     .st-bu{
-        @apply font-normal text-blue-500;
+        @apply font-normal text-black;
     }
     .font-code{
         font-family: 'JetBrains Mono';
         @apply mt-2 mb-2 text-green-500 bg-black w-auto h-auto p-5 rounded-[15px] tracking-[0.1em];
+    }
+    .font-jet {
+        font-family:'JetBrains Mono';
     }
 }
