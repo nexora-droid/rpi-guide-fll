@@ -212,6 +212,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-7\.5 {
+    margin-top: calc(var(--spacing) * 7.5);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -241,6 +244,9 @@
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
+  }
+  .ml-7\.5 {
+    margin-left: calc(var(--spacing) * 7.5);
   }
   .ml-auto {
     margin-left: auto;
