@@ -13,8 +13,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="M153.33-120q-27 0-46.83-19.83-19.83-19.84-19.83-46.84v-586.66q0-27 19.83-46.84Q126.33-840 153.33-840H740q27 0 46.83 19.83 19.84 19.84 19.84 46.84v66.66h66.66V-640h-66.66v126.67h66.66v66.66h-66.66V-320h66.66v66.67h-66.66v66.66q0 27-19.84 46.84Q767-120 740-120H153.33Zm0-66.67H740v-586.66H153.33v586.66ZM220-253.33h235.33V-440H220v186.67Zm268.67-317.34h184.66v-136H488.67v136ZM220-473.33h235.33v-233.34H220v233.34Zm268.67 220h184.66v-284H488.67v284Zm-335.34-520v586.66-586.66Z"/></svg>
             </div>
             <div class="flex-col gap-0">
-                <h1 class="mb-1.25 font-bold text-2xl md:text-3xl ">Raspberry Pi 5 Setup Guide</h1>
-                <h3 class="text-gray-500 md:text-xl text-lg">A complete beginner friendly guide from start to finish.</h3>
+                <h1 class="mb-1.25 font-bold text-2xl md:text-3xl ">The ArchaeoVision Setup Guide</h1>
+                <h3 class="text-gray-500 md:text-xl text-lg">A complete beginner friendly guide to build your own ArchaeoVision!</h3>
             </div>
         </div>
    </div>
@@ -136,6 +136,64 @@
         </div>
         <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
             <p class="font-bold">Step 2.1: Download the Raspberry Pi Imager</p>
+            <p class="font-normal text-gray-500">
+                1. Visit the Raspberry Pi website: <span class="font-normal font-mono w-auto pl-1.5 pr-1.5 bg-gray-50 rounded-[2px]">https://www.raspberrypi.com/software/</span> <br>
+            </p>
+            <p class="font-normal text-gray-500 mt-2">2. Download the Raspberry Pi Imager for your operating system (Windows, macOS, or Linux)</p>
+            <p class="font-normal text-gray-500 mt-2">3. Install the Raspberry Pi Imager to your computer</p>
+        </div>
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <p class="font-bold">Step 2.2: Preparing the MicroSD card</p>
+            <p class="st">1. Insert the microSD card into your laptop. Use an adaptor if necessary.</p>
+            <p class="st">2. Open Raspberry Pi Imager application <span class="font-bold">on your computer</span></p>
+            <p class="st">3. Click <span class="font-bold">Choose Device</span> and select <span class="font-bold">Raspberry Pi 5</span></p>
+            <p class="st">4. Click <span class="font-bold">Choose OS</span>  and select your preferred operating system: <br> <ul class="list-disc list-inside st-ul mb-0 ml-2"> <li>Raspberry Pi OS (64-bit) - Recommended for beginners</li> <li>Other options available: Ubuntu, other Linux distributions</li></ul> </p>
+            <p class="st">5. Click <span class="font-bold">Storage</span> and select <span class="font-bold">your microSD card.</span> </p>
+            <p class="st">6. Click the <span class="font-bold">gear icon</span> or <span class="font-bold">Edit Settings</span> to configure advanced options such as:
+                <ul class="list-disc list-inside st-ul ml-2">
+                    <li>Set hostname</li>
+                    <li>Enable SSH (for remote access)</li>
+                    <li>Set username and password</li>
+                    <li>Configure your WiFi credentials like SSID and password</li>
+                    <li>Set local settings like timezone and keyboard layout</li>
+                </ul>
+            </p>
+            <p class="st">7. Click <span class="font-bold">Save</span> to save your settings.</p>
+            <p class="st">8. Click <span class="font-bold">Write</span> to write your configurations to the microSD card.</p>
+            <p class="st">9. Wait for the process to finish. This ranges from 2 minutes to 10 minutes or more depending on your system.</p>
+            <p class="st">10. Once the process has finished, safely eject your microSD card from the laptop. (Right click microSD card in file man</p>
+        </div>
+    </div>
+    <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
+        <div class="flex-row flex items-center gap-2.5 md:mr-[407px] ">
+            <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
+                <p class="text-white font-bold md:text-2xl text-xl">3</p>
+            </div>
+            <p class="text-blue-600 font-bold md:text-2xl text-xl">Physical Setup and Assembly</p>
+        </div>
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <p class="font-bold">Inserting the MicroSD card</p>
+            <p class="st">Insert the prepared microSD card into the microSD card slot on the underside of the Raspberry Pi 5 board. Push it in gently until it clicks into place.</p>
+            <hr class="hr-d">
+            <p class="font-bold mt-5">Connecting the display</p>
+            <p class="st">Connect your monitor or TV to the Raspberry Pi using a micro HDMI cable. The Pi 5 has two micro HDMI ports; use the port labeled HDMI0 (the one closest to the USB-C power port) for the primary display.</p>
+            <hr class="hr-d">
+            <p class="font-bold mt-5">Connecting the keyboard and mouse</p>
+            <p class="st">Plug your USB keyboard and mouse into any of the USB ports on the Raspberry Pi 5. The Pi 5 has two USB 3.0 ports and two USB 2.0 ports.</p>
+            <hr class="hr-d">
+            <p class="font-bold mt-5">Connecting the network</p>
+            <p class="st">If you prefer a wired connection, connect an Ethernet cable to the Ethernet port on the Raspberry Pi. If you configured Wi-Fi in the Imager settings, you can skip this step and connect wirelessly.</p>
+            <hr class="hr-d">
+            <p class="font-bold mt-5">Install Cooling</p>
+            <p class="st">If you have a case with cooling or an active cooler, install it now according to the manufacturer's instructions. The Raspberry Pi 5 can run hot under load, so cooling is highly recommended.</p>
+        </div>
+    </div>
+    <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
+        <div class="flex-row flex items-center gap-2.5 md:mr-[407px] ">
+            <div class="bg-blue-600 rounded-full w-10 h-10 text-center flex flex-row justify-center items-center">
+                <p class="text-white font-bold md:text-2xl text-xl">4</p>
+            </div>
+            <p class="text-blue-600 font-bold md:text-2xl text-xl">Power on and first boot!</p>
         </div>
     </div>
 </body>

@@ -29,4 +29,13 @@
         font-size: 18px;
         margin-top: -10px;
     }
+    .st{
+        @apply font-normal text-gray-500 mt-2;
+    }
+    .st-ul {
+        @apply font-normal text-gray-500;
+    }
+    .hr-d{
+        @apply mt-5 border-solid border-gray-300 border;
+    }
 }
