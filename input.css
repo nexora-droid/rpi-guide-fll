@@ -44,4 +44,7 @@
     .hr-g{
         @apply mt-5 border-solid border-green-300 border;
     }
+    .cosmic-pop{
+       background: linear-gradient(90deg, #40C9FF, #E81CFF);
+    } /*credits to coolors.co for gradient yahooo*/
 }
