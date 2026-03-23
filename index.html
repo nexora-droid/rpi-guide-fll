@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPI Setup Guide</title>
     <link rel="stylesheet" href="./output.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
 </head>
 <body class="m-0 box-border bg-blue-50">
    <div class="flex flex-row gap-2.5 items-center justify-center bg-white shadow-group h-30">
@@ -229,7 +230,79 @@
         <div class="md:w-200 w-175 h-auto cosmic-pop p-5 rounded-xl">
             <p class="font-semibold text-lg text-white text-center">Now... moving onto the exciting part....</p>
             <p class="font-bold text-white text-2xl text-center">Building ArchaeoVision!!</p>
-        </div>     
+        </div>
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <p class="font-bold text-blue-600 text-xl mb-5">Materials needed</p>
+            <div class="flex flex-row gap-2">
+                <div class="flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3B82F6"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </div>
+                <p class="font-medium text-blue-500">Raspberry Pi AI Camera</p>
+            </div>
+            <div class="flex flex-row gap-2">
+                <div class="flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3B82F6"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </div>
+                <p class="font-medium text-blue-500">Raspberry Pi 5 (which we setup earlier)</p>
+            </div>
+            <div class="flex flex-row gap-2">
+                <div class="flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3B82F6"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </div>
+                <p class="font-medium text-blue-500">Stable internet connection</p>
+            </div>
+        </div>
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <div class="flex flex-row gap-2.5 items-center">
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">1</div>
+                <p class="font-bold text-blue-600 text-xl">Connect the Camera onto the Raspberry Pi</p>
+            </div>
+            <div class="flex flex-col gap-0.5 ml-5">
+                <p class="st-bu">1. Power off your Raspberry Pi 5 for safety.</p>
+                <p class="st-bu">2. Locate the camera connector labeled CAMERA on the board.</p>
+                <p class="st-bu">3. Gently pull up the plastic clip on the camera connector</p>
+                <p class="st-bu">4. Insert the ribbon cable from the IMX500 camera with the blue side facing the Ethernet port.</p>
+                <p class="st-bu">5. Push the plastic clip back down to secure the cable.</p>
+                <p class="st-bu">6. Power on your Raspberry Pi.</p>
+            </div>
+        </div>  
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <div class="flex flex-row gap-2.5 items-center">
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">2</div>
+                <p class="font-bold text-blue-600 text-xl">Update your system</p>
+            </div>
+            <div class="flex flex-col gap-0.5 ml-5">
+                <p class="st-bu">Open the Terminal (on your Raspberry Pi) and update your system packages:</p>
+                <div class="mt-2 mb-2 font-code bg-black w-auto h-auto p-5 rounded-[15px] tracking-[0.1em] ">
+                    <p>sudo apt upgrade</p>
+                    <p>sudo apt full-upgrade</p>
+                </div>
+                <p class="st-bu">Running both of these commands in succession updates all packages installed on the system and is a good way to ensure every library is up to date </p>
+            </div>
+        </div> 
+        <div class="bg-white md:w-200 w-175 h-auto border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <div class="flex flex-row gap-2.5 items-center">
+                <div class="bg-blue-300 w-10 h-10 rounded-full mt-[2px] text-center flex flex-col justify-center text-blue-500 font-bold">3</div>
+                <p class="font-bold text-blue-600 text-xl">Create a Project Folder and Virtual Environment</p>
+            </div>
+            <div class="flex flex-col gap-0.5 ml-5">
+                <p class="st-bu">This can be done in 2 ways.</p>
+                <p class="st-bu">Either you can make it on the desktop screen, or via commands. In the end some terminal based commands will be used. </p>
+                <p class="st-bu"><span class="font-extrabold">Method 1: Via Commands</span></p>
+                <div class="font-code">
+                    <p class="mt-5"># Navigate to Desktop and make a folder called 'arch-vision' or 'archaeo-vision'</p>
+                    <p class="mt-5">cd ~/Desktop</p>
+                    <p class="mt-5">mdkir archaeo-vision</p>
+                    <p class="mt-5"># Navigate into the folder</p>
+                    <p class="mt-5">cd archaeo-vision</p>
+                    <p class="mt-5"># Create a virtual environment with system packages</p>
+                    <p class="mt-5">python3 -m venv --system-site-packages archaeo-vision</p>
+                    <p class="mt-5"># Activate the virtual environment</p>
+                    <p class="mt-5 mb-5">source archaeo-vision/bin/activate</p>
+                </div>
+            </div>
+            
+        </div>   
     </div>
 </body>
 </html>
