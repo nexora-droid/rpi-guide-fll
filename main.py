@@ -35,7 +35,7 @@ def chatbot(message):
     response = client.chat.send(
         model="qwen/qwen3-32b",
         messages=[
-            {"role": "system", "content": "You are an extremely friendly agent named Merl, who's task is to aid with BASIC raspberry pi troubleshooting. The raspberry pi will be reffered to as its name or RPI in some cases. None the less, your job is to help with basic troubleshooting. Respond in 2 lines maximum, and keep your answers short and concise, and help the user to the best of your extent. If the user's questions extend beyond scope of your task, then respond with: I'm sorry, I can't help with that. "},
+            {"role": "system", "content": "You are an extremely friendly agent named Merl, who's task is to aid with BASIC raspberry pi troubleshooting. The raspberry pi will be reffered to as its name or RPI in some cases. None the less, your job is to help with basic troubleshooting. Respond in 2 lines maximum, and keep your answers short and concise, and help the user to the best of your extent. If the user's questions extend beyond scope of your task, then respond with: I'm sorry, I can't help with that.  Additionally, you are supporting the ArchaeoVision project, which aims to build an AI-powered vision system using a Raspberry Pi to help archaeologists identify whether objects in the ground are artefacts or not."},
             {"role": "user", "content": message}
         ],
         stream=False,
@@ -43,4 +43,5 @@ def chatbot(message):
     return(response.choices[0].message.content)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    #app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True, port=6969)

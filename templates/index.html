@@ -27,9 +27,15 @@
                 </div>
                 <div class="flex flex-col gap-0.5">
                     <p class="font-bold text-blue-600 md:text-2xl text-xl text-left">Before you begin</p>
-                    <p class="font-semibold text-blue-500 ">This guide assumes you have no knowledge of booting up a Raspberry Pi. If this is the case, follow along carefully. If you already have booted (and flashed) your RPI please skip to <span class="underline decoration-wavy underline-offset-2 hover:underline-offset-8 scale-100 hover:scale-110 transition-all duration-300 ease-in-out inline-block"><a href="#section1">section 1.</a></span></p>
+                    <p class="font-semibold text-blue-500 ">This guide assumes you have no knowledge of booting up a Raspberry Pi. If this is the case, follow along carefully. If you already have booted (and flashed) your RPI please skip to <span class="underline decoration-wavy underline-offset-2 hover:underline-offset-8 scale-100 hover:scale-110 transition-all duration-300 ease-in-out inline-block"><a onclick="scrollToSec1()">section 1.</a></span></p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="flex flex-col ml-auto mr-auto items-center mt-10">
+        <div class="bg-white md:w-200 h-auto w-175 border-gray-300 border-2 rounded-[15px] mt-5 p-5">
+            <p class="st font-bold text-2xl">What is ArchaeoVision?</p>
+            <p class="st wrap-break-word text-justify">ArchaeoVision brings artificial intelligence into the field of archaeology. Using a Raspberry Pi and camera, it captures and analyzes images in real-time to help determine whether objects in the ground may be artefacts. Designed to be affordable and easy to build, it empowers both beginners and professionals to enhance their discovery process with smart technology.</p>
         </div>
     </div>
     <div class="flex flex-col  ml-auto mr-auto items-center mt-10">
@@ -398,19 +404,48 @@
     <button id="chatbotButton" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-400 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-2xl z-50 transition">
         🤔
     </button>
-    <div id="chatbotBox" class="hidden fixed bottom-24 right-6 w-100 h-100 bg-white border border-gray-300 shadow-xl rounded-xl z-50 flex flex-col overflow-hidden">
-        <div class="bg-blue-600 text-white p-3 font-bold">
-            Troubleshooting Chatbot
+    <div id="chatbotBox" class="hidden fixed bottom-24 right-6 w-100 h-160 bg-white border border-gray-300 shadow-xl rounded-xl z-50 flex flex-col overflow-hidden">
+        <div class="bg-blue-600 text-white p-3 font-bold flex flex-row gap-4 items-center justify-center">
+            <img src="https://cdn.hackclub.com/019d2506-fd47-7a81-ae2c-c2d865b57b73/chatboticon.png" class="w-15 h-15 rounded-full">
+            <p>Troubleshooting Chatbot</p>
         </div>
         <div class="flex-1 p-3 text-sm overflow-y-auto" id="chatMessages">
-            <p class="chat-msg">Hello! </p>
-            <p class="chat-msg">My name is Merl and ask me anything, and I'll try my best to help you!</p></p>
+            <div class="bot-msg">
+                <img src="https://cdn.hackclub.com/019d2506-fd47-7a81-ae2c-c2d865b57b73/chatboticon.png" class="w-15 h-15 rounded-full">
+                <p class="chat-msg">Hello! </p>
+            </div>
+            <div class="bot-msg">
+                <img src="https://cdn.hackclub.com/019d2506-fd47-7a81-ae2c-c2d865b57b73/chatboticon.png" class="w-15 h-15 rounded-full">
+                <p class="chat-msg">My name is Merl and ask me anything, and I'll try my best to help you!! </p>
+            </div>
         </div>
         <div class="p-2 border-t border-blue-400 flex gap-2">
             <input id="chatInput" class="flex-1 border-0 rounded px-2 py-1 text-sm" placeholder="Ask Merl anything..." type="text"/>
             <button class="bg-blue-600 text-white px-3 rounded" id="chatboxSend" >Send</button>
         </div>
     </div>
+    <template id="userTemplate">
+        <div class="user-msg">
+            <img src="https://cdn.hackclub.com/019d250a-0361-733f-a6ff-1125dd6433ce/usericon.png" class="w-13 h-13 rounded-full">
+            <p class="chat-msg-user"></p>
+        </div>
+    </template>
+    <template id="botTemplate">
+        <div class="bot-msg">
+            <img src="https://cdn.hackclub.com/019d2506-fd47-7a81-ae2c-c2d865b57b73/chatboticon.png" class="w-15 h-15 rounded-full">
+            <p class="chat-msg"></p>
+        </div>
+    </template>
+    <template id="typingTemplate">
+        <div class="bot-msg" id="cloned-msg">
+            <img src="https://cdn.hackclub.com/019d2506-fd47-7a81-ae2c-c2d865b57b73/chatboticon.png" class="w-15 h-15 rounded-full">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </template>
     <script src="{{(url_for('static', filename='js/script.js'))}}"></script>
 </body>
 </html>

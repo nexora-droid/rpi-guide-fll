@@ -61,24 +61,43 @@
         font-family:'JetBrains Mono';
     }
     .chat-msg{
-        @apply text-black font-normal bg-green-400 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
+        @apply text-black font-normal bg-green-200 border-2 border-green-300 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
     }
     .chat-msg-user{
-        @apply text-black font-normal bg-blue-300 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
+        @apply text-black font-normal bg-blue-200 border-2 border-blue-300  rounded-xl w-auto h-auto p-3 mt-2 mb-2;
     }
-    .typing-dots::after{
-        content:".";
-        animation: dots 1s steps(3, end) infinite;
+    .typing-dots{
+        display: flex;
+        gap: 4px;
+        align-items: center;
     }
-    @keyframes dots {
-        0% {
-            content: ".";
+    .typing-dots span{
+        width: 6px;
+        height: 6px;
+        background: #01B902;
+        border-radius: 50%;
+        animation: bounce 1.2s infinite ease-in-out;
+    }
+    .typing-dots span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .typing-dots span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    @keyframes bounce {
+        0%, 80%, 100%{
+            transform: scale(0.6);
+            opacity: 0.4;
         }
-        50% {
-            content: "..";
+        40%{
+            transform: scale(1);
+            opacity: 1;
         }
-        100% {
-            content: "...";
-        }
+    }
+    .bot-msg{
+        @apply flex flex-row gap-2 items-center;
+    }
+    .user-msg{
+        @apply flex flex-row-reverse gap-2 items-center;
     }
 }

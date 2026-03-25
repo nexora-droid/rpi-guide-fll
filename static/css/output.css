@@ -9,8 +9,8 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-100: oklch(96.2% 0.044 156.743);
+    --color-green-200: oklch(92.5% 0.084 155.995);
     --color-green-300: oklch(87.1% 0.15 154.449);
-    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
@@ -277,6 +277,9 @@
   .box-border {
     box-sizing: border-box;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -292,8 +295,14 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-13 {
+    height: calc(var(--spacing) * 13);
+  }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
   }
   .h-30 {
     height: calc(var(--spacing) * 30);
@@ -301,8 +310,8 @@
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
-  .h-100 {
-    height: calc(var(--spacing) * 100);
+  .h-160 {
+    height: calc(var(--spacing) * 160);
   }
   .h-\[23\%\] {
     height: 23%;
@@ -313,8 +322,14 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-13 {
+    width: calc(var(--spacing) * 13);
+  }
   .w-14 {
     width: calc(var(--spacing) * 14);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
   }
   .w-22 {
     width: calc(var(--spacing) * 22);
@@ -378,6 +393,9 @@
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -524,6 +542,9 @@
   .text-center {
     text-align: center;
   }
+  .text-justify {
+    text-align: justify;
+  }
   .text-left {
     text-align: left;
   }
@@ -572,6 +593,9 @@
   }
   .wrap-anywhere {
     overflow-wrap: anywhere;
+  }
+  .wrap-break-word {
+    overflow-wrap: break-word;
   }
   .wrap-normal {
     overflow-wrap: normal;
@@ -696,6 +720,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @layer components {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
@@ -787,7 +814,10 @@
     height: auto;
     width: auto;
     border-radius: var(--radius-xl);
-    background-color: var(--color-green-400);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    border-color: var(--color-green-300);
+    background-color: var(--color-green-200);
     padding: calc(var(--spacing) * 3);
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
@@ -799,26 +829,54 @@
     height: auto;
     width: auto;
     border-radius: var(--radius-xl);
-    background-color: var(--color-blue-300);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    border-color: var(--color-blue-300);
+    background-color: var(--color-blue-200);
     padding: calc(var(--spacing) * 3);
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
     color: var(--color-black);
   }
-  .typing-dots::after {
-    content: ".";
-    animation: dots 1s steps(3, end) infinite;
+  .typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
   }
-  @keyframes dots {
-    0% {
-      content: ".";
+  .typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: #01B902;
+    border-radius: 50%;
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  .typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0.6);
+      opacity: 0.4;
     }
-    50% {
-      content: "..";
+    40% {
+      transform: scale(1);
+      opacity: 1;
     }
-    100% {
-      content: "...";
-    }
+  }
+  .bot-msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+  }
+  .user-msg {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
   }
 }
 @property --tw-scale-x {
@@ -921,6 +979,16 @@
 @property --tw-ease {
   syntax: "*";
   inherits: false;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
