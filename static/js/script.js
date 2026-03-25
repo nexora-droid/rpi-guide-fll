@@ -15,6 +15,7 @@ send.addEventListener("click", () => {
   userMsg.textContent = message;
   userMsg.classList.add("chat-msg-user");
   msgs.appendChild(userMsg);
+  msgs.scrollTop = msgs.scrollHeight;
 
   const typing = showTyping();
   fetch("/chatbot/msg", {
