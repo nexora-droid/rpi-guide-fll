@@ -68,7 +68,7 @@
                     </div>
                     <div class="flex flex-col gap-2">
                         <p class="mat-list-name">MicroSD Card</p>
-                        <p class="mat-list-desc">Reccomended size is 128GB minimum. Project to be built uses around 100GB of data.</p>
+                        <p class="mat-list-desc">Reccomended size is 128GB minimum. Project to be built uses around 10GB of data, but a good sized SD card will allow you to scale properly.</p>
                     </div>
                 </div>
                 <div class="flex flex-row gap-2">
@@ -336,10 +336,10 @@
             <div class="flex flex-col gap-0.5 ml-5">
                 <p class="st">Install the Moondream package and required dependencies (make sure your virtual environment is activated):</p>
                 <div class="font-code wrap-normal p-5">
-                    <p># Install Moondream)</p>
-                    <p class="mt-5">pip3 install moondream</p>
+                    <p># Install Moondream </p>
+                    <p class="mt-5">pip3 install moondream==0.0.06</p>
                     <p class="mt-5"># Install numpy version</p>
-                    <p class="mt-5">pip3 install numpy</p>
+                    <p class="mt-5">pip3 install numpy==1.26.4</p>
                     <p class="mt-5"># Download the int8 quantized model</p>
                     <p class="mt-5 inline-block max-w-full wrap-anywhere [word-break: break-word]">wget https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream-2b-int8.mf</pre>
                 </div>
@@ -354,31 +354,25 @@
                 <p class="st">Create a python script to capture images and describe objects in real-time:</p>
                 <div class="font-code wrap-normal p-5">
                     <p># Create the script file</p>
-                    <p class="mt-5">nano archvision.py</p>
-                    <p class="mt-5"># Add the following code:</p>
-                    <p class="mt-5">from picamera2 import Picamera2
-                    <p class="mt-5">from PIL import Image</p> 
                     <p class="mt-5">import moondream as md</p>
-                    <p class="mt-5"># Initialize the Picamera2</p>
-                    <p class="mt-5">picam2 = Picamera2()</p>
-                    <p class="mt-5">picam2.configure(picam2.create_still_configuration(main={"size": (512,512), "format": "RGB888"}))</p>
-                    <p class="mt-5">picam2.start()</p>
-                    <p class="mt-5"># Load the moondream model</p>
-                    <p class="mt-5">model = md.vl(model="./moondream-2b-int8.mf")</p>
-                    <p class="mt-5">print("Moondream AI Vision System Ready!")</p>
-                    <p class="mt-5">print("Starting continuous object detection...")</p>
-                    <p class="mt-5">print("Press Ctrl+C to exit\n")</p>
-                    <p class="mt-5">while True:</p>
-                    <p class="mt-5 ml-7.5"># Capture image as numpy array</p>
-                    <p class="mt-5 ml-7.5">image_array = picam2.capture_array()</p>
-                    <p class="mt-5 ml-7.5"># Convert numpy array to PIL Image</p>
-                    <p class="mt-5 ml-7.5">image = Image.fromarray(image_array)</p>
-                    <p class="mt-5 ml-7.5">print("Photo captured. Starting query...")</p>
-                    <p class="mt-5 ml-7.5">encoded_image = model.encode_image(image)</p>
-                    <p class="mt-5 ml-7.5"># Ask questions about the image</p>
-                    <p class="mt-5 ml-7.5">answer = model.query(encoded_image, "Is there a man with a blue jacket in this image?")["answer"]</p>
-                    <p class="mt-5 ml-7.5">print(answer)</p>
+                    <p class="mt-5">from PIL import Image
+                    <p class="mt-5">Load the local .mf file
+                    <p class="mt-5">model = md.vl(model="./moondream-0_5b-int8.mf")
+                    <p class="mt-5"># Load your image
+                    <p class="mt-5">image = Image.open("./images/crash1.jpg")
+                    <p class="mt-5"># Encode the image 
+                    <p class="mt-5">encoded_image = model.encode_image(image)
+                    <p class="mt-5"># Ask questions about the image
+                    <p class="mt-5">answer = model.query(encoded_image,"Is the car driveable?")["answer"]
+                    <p class="mt-5">print(answer)
                 </div>
+                <p class="st">Let's take a look at the script.</p>
+                <div class="font-code p-5">
+                    <p>import moondream as md</p>
+                    <p class="mt-5">from PIL import Image</p>
+                </div>
+                <p class="st">We start by importing the needed Moondream package and Python Imaging Library (PIL) </p>
+                
             </div>
         </div>  
         <div class="bg-blue-200 md:w-200 w-175 h-auto border-blue-300 border-2 rounded-[15px] mt-5 p-5">
