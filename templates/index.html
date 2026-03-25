@@ -398,19 +398,19 @@
     <button id="chatbotButton" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-400 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-2xl z-50 transition">
         🤔
     </button>
-    <div id="chatbotBox" class="hidden fixed bottom-24 right-6 w-80 h-96 bg-white border border-gray-300 shadow-xl rounded-xl z-50 flex flex-col overflow-hidden">
+    <div id="chatbotBox" class="hidden fixed bottom-24 right-6 w-100 h-100 bg-white border border-gray-300 shadow-xl rounded-xl z-50 flex flex-col overflow-hidden">
         <div class="bg-blue-600 text-white p-3 font-bold">
             Troubleshooting Chatbot
         </div>
         <div class="flex-1 p-3 text-sm overflow-y-auto" id="chatMessages">
             <p class="chat-msg">Hello! </p>
-            <p class="chat-msg">My name is Merl, your AI chatbot for any help regarding building this amazing project! <br> Ask me anything, and I'll try my best to help you!</p></p>
+            <p class="chat-msg">My name is Merl and ask me anything, and I'll try my best to help you!</p></p>
         </div>
         <div class="p-2 border-t border-blue-400 flex gap-2">
             <input id="chatInput" class="flex-1 border-0 rounded px-2 py-1 text-sm" placeholder="Ask Merl anything..." type="text"/>
-            <button class="bg-blue-600 text-white px-3 rounded" id="chatboxSend">Send</button>
+            <button class="bg-blue-600 text-white px-3 rounded" id="chatboxSend" >Send</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="{{(url_for('static', filename='js/script.js'))}}"></script>
 </body>
 </html>

@@ -58,6 +58,24 @@
         font-family:'JetBrains Mono';
     }
     .chat-msg{
-        @apply text-black bg-gray-200 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
+        @apply text-black font-normal bg-green-400 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
+    }
+    .chat-msg-user{
+        @apply text-black font-normal bg-blue-300 rounded-xl w-auto h-auto p-3 mt-2 mb-2;
+    }
+    .typing-dots::after{
+        content:".";
+        animation: dots 1s steps(3, end) infinite;
+    }
+    @keyframes dots {
+        0% {
+            content: ".";
+        }
+        50% {
+            content: "..";
+        }
+        100% {
+            content: "...";
+        }
     }
 }
